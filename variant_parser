@@ -1,0 +1,17 @@
+FILE = r'c:\Users\gjm0kx\Dysk Google\APTIV\Szkolenie Python\2019-07-30\test.tc'
+
+# hashtag = []
+# data = []
+with open(FILE) as file:
+    row = file.readlines()
+
+    for line in row:
+        if line.startswith('#%') and not line.startswith('#%DESC'):
+            line_cleared = line.strip().split()
+            hashtag, data = line_cleared
+            print(hashtag)
+            # print(data)
+            # print('---------')
+
+            if hashtag == '#%NAME':
+                print(hashtag + 'VARIANT')
